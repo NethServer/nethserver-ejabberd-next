@@ -1,5 +1,5 @@
 ===================
-nethserver-ejabberd
+nethserver-ejabberd-next
 ===================
 
 The chat function is implemented using ejabberd XMPP server. Enabled features are:
@@ -14,14 +14,14 @@ The ``jabberadmins`` must be created manually.
 If the system has a remote account provider also reconfigure the ejabberd service: ::
 
     sss_cache -g jabberadmins
-    signal-event nethserver-ejabberd-save
+    signal-event nethserver-ejabberd-next-save
 
 When used with AD backend, following limitations apply:
 
 * The shared roster doesn't support groups
 * The shared roster displays the list of user names (not full names)
 
-See also the Server Manager UI API documentation: https://github.com/NethServer/nethserver-ejabberd/blob/master/UI-API.md
+See also the Server Manager UI API documentation: https://github.com/NethServer/nethserver-ejabberd-next/blob/master/UI-API.md
 
 Configuration
 =============

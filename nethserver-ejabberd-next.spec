@@ -1,5 +1,5 @@
 Summary: NethServer ejabberd XMPP server
-Name: nethserver-ejabberd
+Name: nethserver-ejabberd-next
 Version: 1.8.4
 Release: 1%{?dist}
 License: GPL
@@ -14,7 +14,7 @@ Requires(post): systemd
 Requires(preun): systemd
 Requires(postun): systemd
 
-Requires: ejabberd = 20.03
+Requires: ejabberd
 Requires: nethserver-httpd
 
 %description

@@ -61,7 +61,7 @@ class Ejabber extends \Nethgui\Controller\AbstractController
 
     protected function onParametersSaved($changes)
     {
-        $this->getPlatform()->signalEvent('nethserver-ejabberd-save &');
+        $this->getPlatform()->signalEvent('nethserver-ejabberd-next-save &');
     }
 
 }

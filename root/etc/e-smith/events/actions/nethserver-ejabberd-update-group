@@ -32,7 +32,7 @@ if ($groupName !~ '^jabberadmins' ) {
     exit(0);
 }
 
-if( ! esmith::event::event_signal('nethserver-ejabberd-save')) {
+if( ! esmith::event::event_signal('nethserver-ejabberd-next-save')) {
     $errors++;
 }
 

@@ -21,7 +21,7 @@
 
         // get stats
         nethserver.exec(
-            ["nethserver-ejabberd/read"],
+            ["nethserver-ejabberd-next/read"],
             {sections:["status", "configuration"]},
             null,
             function (success) {
@@ -66,7 +66,7 @@
         function doRead() {
             $('#config-loader').hide();
             nethserver.exec(
-                ["nethserver-ejabberd/read"],
+                ["nethserver-ejabberd-next/read"],
                 {sections:["configuration"]},
                 null,
                 function (success) {
@@ -129,7 +129,7 @@
             }}};
 
             nethserver.exec(
-                ["nethserver-ejabberd/validate"],
+                ["nethserver-ejabberd-next/validate"],
                 data,
                 null,
                 function (success) {
@@ -139,10 +139,10 @@
 
                     // update values
                     nethserver.exec(
-                        ["nethserver-ejabberd/update"],
+                        ["nethserver-ejabberd-next/update"],
                         data,
                         function (stream) {
-                            console.info("nethserver-ejabberd", stream);
+                            console.info("nethserver-ejabberd-next", stream);
                         },
                         function (success) {
                             doRead();
@@ -332,7 +332,7 @@
         nethserver.exec(
             ["system-apps/read"], {
                 action: "info",
-                name: 'nethserver-ejabberd'
+                name: 'nethserver-ejabberd-next'
             },
             null,
             function (success) {

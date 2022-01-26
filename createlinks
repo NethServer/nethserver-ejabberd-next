@@ -28,20 +28,20 @@ my @certificates = (qw(
 ));
 
 #
-# nethserver-ejabberd-update event
+# nethserver-ejabberd-next-update event
 #
 
-event_actions('nethserver-ejabberd-update', qw(
+event_actions('nethserver-ejabberd-next-update', qw(
               initialize-default-databases   00
 ));
 
-event_templates('nethserver-ejabberd-update', qw(
+event_templates('nethserver-ejabberd-next-update', qw(
                 /etc/ejabberd/ejabberd.yml
                 /etc/ejabberd/ejabberd.cfg
                 /etc/dnsmasq.conf
 ), @certificates);
 
-event_services('nethserver-ejabberd-update', qw(
+event_services('nethserver-ejabberd-next-update', qw(
                httpd reload
                ejabberd restart
                dnsmasq restart
@@ -49,10 +49,10 @@ event_services('nethserver-ejabberd-update', qw(
 
 
 #--------------------------------------------------
-# actions for nethserver-ejabberd-save event
+# actions for nethserver-ejabberd-next-save event
 #--------------------------------------------------
 
-$event = "nethserver-ejabberd-save";
+$event = "nethserver-ejabberd-next-save";
 
 event_services($event, 'ejabberd' => 'restart');
 event_services($event, 'httpd' => 'reload');
@@ -86,7 +86,7 @@ templates2events("/etc/ejabberd/ejabberd.yml",  $event);
 #--------------------------------------------------
 
 foreach $event (qw (group-modify group-create group-delete)){
-event_actions($event, 'nethserver-ejabberd-update-group' => '95');
+event_actions($event, 'nethserver-ejabberd-next-update-group' => '95');
 }
 
 #--------------------------------------------------
@@ -94,7 +94,7 @@ event_actions($event, 'nethserver-ejabberd-update-group' => '95');
 #--------------------------------------------------
 
 $event = "migration-import";
-event_actions($event, 'nethserver-ejabberd-migrate' => 50);
+event_actions($event, 'nethserver-ejabberd-next-migrate' => 50);
 
 #
 # certificate-update event
@@ -112,7 +112,7 @@ event_services('certificate-update', qw(
 
 $event = 'pre-backup-data';
 
-event_actions($event, 'nethserver-ejabberd-backup' => 50);
+event_actions($event, 'nethserver-ejabberd-next-backup' => 50);
 
 #--------------------------------------------------
 # actions for post-restore-data event
@@ -120,5 +120,5 @@ event_actions($event, 'nethserver-ejabberd-backup' => 50);
 
 $event = 'post-restore-data';
 
-event_actions($event, 'nethserver-ejabberd-restore' => 50);
+event_actions($event, 'nethserver-ejabberd-next-restore' => 50);
 event_services($event, 'ejabberd' => 'restart');
