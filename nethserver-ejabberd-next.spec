@@ -16,6 +16,7 @@ Requires(postun): systemd
 
 Requires: ejabberd
 Requires: nethserver-httpd
+Conflicts: nethserver-ejabberd
 
 %description
 NethServer configuration of ejabberd XMPP server
