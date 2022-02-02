@@ -20,7 +20,7 @@
 # along with NethServer.  If not, see COPYING.
 #
 
-ejabberdctl="/opt/ejabberd-20.03/bin/ejabberdctl"
+ejabberdctl="/opt/ejabberd-*/bin/ejabberdctl"
 
 configuration="{}"
 status="{}"

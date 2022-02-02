@@ -54,7 +54,7 @@ foreach my $prop (qw(
 
 esmith::event::set_json_log(1);
 
-my $success = esmith::event::event_signal('nethserver-ejabberd-save');
+my $success = esmith::event::event_signal('nethserver-ejabberd-next-save');
 if($success) {
     success();
 } else {

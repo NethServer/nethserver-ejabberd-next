@@ -1,11 +1,11 @@
 {
-    "id": "nethserver-ejabberd",
+    "id": "nethserver-ejabberd-next",
     "name": "ejabberd",
     "summary": "NethServer integration of ejabberd XMPP server",
     "description": "Provides ejabberd XMPP server",
     "url": "",
-    "homepage": "https://github.com/NethServer/nethserver-ejabberd",
-    "provides": ["nethserver-ejabberd"],
+    "homepage": "https://github.com/NethServer/nethserver-ejabberd-next",
+    "provides": ["nethserver-ejabberd-next"],
     "release": {
         "version": "_RELEASE_"
     },
@@ -16,7 +16,7 @@
     },
     "author": {
         "name": "The NethServer community developers",
-        "url": "https://github.com/NethServer/nethserver-ejabberd",
+        "url": "https://github.com/NethServer/nethserver-ejabberd-next",
         "email": "security@nethserver.org"
     },
     "icon": "logo.png"

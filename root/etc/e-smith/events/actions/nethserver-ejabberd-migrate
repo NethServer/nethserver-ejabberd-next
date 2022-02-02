@@ -51,7 +51,7 @@ $new->merge_props($old->props);
 #
 # Apply configuration
 # 
-if( ! esmith::event::event_signal('nethserver-ejabberd-update')) {
+if( ! esmith::event::event_signal('nethserver-ejabberd-next-update')) {
     exit(1);
 }
 

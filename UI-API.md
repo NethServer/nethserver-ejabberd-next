@@ -1,4 +1,4 @@
-# nethserver-ejabberd
+# nethserver-ejabberd-next
 
 NethServer configuration of ejabberd XMPP server
 
@@ -87,7 +87,7 @@ required.
 
 Invocation example:
 ```bash
-echo '{"configuration":{"props":{"status":"disabled","WebAdmin":"enabled","S2S":"enabled","ModMamStatus":"enabled","ModMamPurgeDBStatus":"enabled","ModMamPurgeDBInterval":"45","ShaperFast":"1000000","ShaperNormal":"500000"}}}' | /usr/bin/sudo /usr/libexec/nethserver/api/nethserver-ejabberd/validate | jq
+echo '{"configuration":{"props":{"status":"disabled","WebAdmin":"enabled","S2S":"enabled","ModMamStatus":"enabled","ModMamPurgeDBStatus":"enabled","ModMamPurgeDBInterval":"45","ShaperFast":"1000000","ShaperNormal":"500000"}}}' | /usr/bin/sudo /usr/libexec/nethserver/api/nethserver-ejabberd-next/validate | jq
 ```
 
 ## update

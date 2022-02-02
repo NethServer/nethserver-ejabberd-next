@@ -1,6 +1,6 @@
 #!/bin/bash
 
-tarball=nethserver-ejabberd-ui.tar.gz
+tarball=nethserver-ejabberd-next-ui.tar.gz
 bdir=$(mktemp -d -p .)
 trap "rm -rf ${bdir}" EXIT
 
